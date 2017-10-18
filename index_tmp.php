@@ -17,7 +17,7 @@
 	<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-				<h1>My first bootstrap</h1><br/>
+				<h1>My first bootstrfap</h1><br/>
 				<button type="button" class="btn btn-info" data-toggle="modal" data-target="#addMember">
 					Submit</button>
 				<button type="button" class="btn btn-danger">Cancel</button><br/>
