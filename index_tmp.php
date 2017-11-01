@@ -1,7 +1,4 @@
 
-<?php require "retive.php";
-
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,8 +16,31 @@
 				<div class="col-md-12">
 				<h1>My first bootstrfap</h1><br/>
 				<button type="button" class="btn btn-info" data-toggle="modal" data-target="#addMember">
-					Submit</button>
+					Add</button>
 				<button type="button" class="btn btn-danger">Cancel</button><br/>
+				<?php require('retrieve.php');
+				?>
+				<table class = "table">
+				<tr>
+					<th>ID</th>
+					<th>fname</th>
+					<th>lname</th>
+					<th>contact</th>
+				</tr>
+				<?php 
+					foreach($output ['data'] as $row){
+				?>
+				<tr>
+					<td><?php echo $row[0]; ?></td>
+					<td><?php echo $row[1]; ?></td>
+					<td><?php echo $row[2]; ?></td>
+					<td><?php echo $row[3]; ?></td>
+				</tr>
+
+					<?php  	}	?>
+
+
+
 				</div>
 			</div>
 	</div>
@@ -30,14 +50,21 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header"> 
-					Modal Header 
+					please input member data :5
 				</div>
+				<form method="POST" action="./phplib/create.php">
 				<div class="modal-body">
-					Modal Body
+					ID : <input type="text" name="id"><br>
+					fname: <input type="text" name="fname"><br>
+					lname : <input type="text" name="lname"><br>
+					contact : <input type="text" name="contact"><br>
+
 				</div>
 				<div class="modal-footer">
-					Modal Footer
+					<input type="submit" value="SUBMIT">
+					<input type="reset" value="Reset">
 				</div>
+			</form>
 			</div>
 		</div>
 	</div>
