@@ -1,4 +1,4 @@
-<?php 
+<?php
     require_once('./phplib/dbcon.php');
     $sql="SELECT * from members";
     $result = $conn->query($sql);
@@ -10,6 +10,6 @@ while($row=$result->fetch_assoc()){
 }
 //echo "<br>";
 //var_dump($data);
-echo
+
 $conn->close();
-?>    
+?>
